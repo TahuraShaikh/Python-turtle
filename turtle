@@ -1,0 +1,34 @@
+import turtle
+import random
+
+#3 turtles created and we assign colors
+
+a=turtle.Turtle()
+a.color('red')
+
+b=turtle.Turtle()
+
+b.color('blue')
+
+c=turtle.Turtle()
+c.color('green')
+
+# list of turtles
+turtles=[a,b,c]
+
+for item in turtles:
+	item.penup()		# stopped using penup()
+	item.shape('turtle')		# shape is assigned
+	item.shapesize(5,5)		#stretched 4 times there size		
+
+# a,b,c moved to different co-ordinates , start from same position
+ 
+a.goto(-300,-100)
+
+b.goto(-300,0)
+
+c.goto(-300,-100)
+
+for race in range(10):		# 10 loops
+	for item in turtles:
+		item.fd(random.randint(0,12))		# each is moved forward random no.of steps
